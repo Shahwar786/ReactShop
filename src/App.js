@@ -1,21 +1,30 @@
 // import { Route, Routes } from "react-router-dom";
-import HeaderBanner from "./components/HeaderBanner";
+import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import ProductCart from "./components/Product Cart/ProductCart";
-import ProductsContainer from "./components/ProductsContainer";
+import AuthProvider from "./contexts/AuthProvider";
 import CartProvider from "./contexts/CartProvider";
+import Home from "./Home";
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
 // import Login from "./pages/LoginPage";
 // import SignUp from "./pages/SignUp";
+import PrivateRoute from './routes/PrivateRoute';
 
 function App() {
   return (
     <div className="">
       <CartProvider>
+        <AuthProvider>
         <Navbar />
         <ProductCart />
 
-        <HeaderBanner />
-        <ProductsContainer />
+          <Routes>
+            <Route path="/" element={<PrivateRoute><Home /></PrivateRoute>} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<SignUp />} />
+          </Routes>
+        
         {/* <Routes> */}
         {/* <Route path="/" element={<HeaderBanner />} /> */}
         {/* <Route path="/" element={<ProductsContainer />} /> */}
@@ -23,7 +32,7 @@ function App() {
         {/* <Route path="/login" element={<Login />} /> */}
         {/* <Route path="/signup" element={<SignUp />} /> */}
         {/* </Routes> */}
-
+        </AuthProvider>
       </CartProvider>
     </div>
   );
