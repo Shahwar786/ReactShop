@@ -1,7 +1,6 @@
 // import axios from "axios";
-import React, { useState } from "react";
+import { useState } from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
-import { BsCartCheckFill } from "react-icons/bs";
 // import { useNavigate } from "react-router-dom";
 // import { HashLink } from 'react-router-hash-link';
 // import swal from "sweetalert";
@@ -26,8 +25,8 @@ const ProductCard = (props) => {
     newProduct["pdQuantity"] = 1;
     newProduct["pdColor"] = pdColor?.[0];
     // const navigate = useNavigate();
-    const savedPrice = price - disCountedPrice;
-    const findPd = cart?.find((item) => item._id === _id);
+    // const savedPrice = price - disCountedPrice;
+    // const findPd = cart?.find((item) => item._id === _id);
     // const { newUser } = useAuth();
 
     // //handle add to cart
@@ -57,11 +56,11 @@ const ProductCard = (props) => {
                     {/* discount badge  */}
                    
                             
-                                <div className="flex left-0 top-4 z-20 absolute">
+                                {/* <div className="flex left-0 top-4 z-20 absolute">
                                     <span className="px-2 py-1 text-xs bg-violet-600 text-center text-white rounded-tr-full rounded-br-full">
-                                        Save: {savedPrice?.toFixed(0)}&#2547;
+                                        Save: {savedPrice?.toFixed(0)}$
                                     </span>
-                                </div>
+                                </div> */}
                             
                         
                     
@@ -99,7 +98,7 @@ const ProductCard = (props) => {
                                         {/* price  */}
                                         <div className="flex flex-row space-x-1 items-center">
                                             <h2 className="text-sm md:text-base lg:text-base font-semibold text-primary">
-                                                &#2547; {disCountedPrice?.toFixed(0)}
+                                                $ {disCountedPrice?.toFixed(0)}
                                             </h2>
                                             {discount > 0 && (
                                                 <>
@@ -107,14 +106,14 @@ const ProductCard = (props) => {
                                                         className="text-sm italic text-gray-500"
                                                         style={{ fontSize: "10px" }}
                                                     >
-                                                        &#2547; {price}
+                                                        $ {price}
                                                     </del>
                                                 </>
                                             )}
                                         </div>
 
                                         {/* cart  */}
-                                        {findPd ? (
+                                        {/* {findPd ? (
                                             <>
                                                 <div className="flex items-center justify-end">
                                                     <button className="hidden bg-violet-200 opacity-40 px-2 py-2 rounded-lg text-gray-500 transition duration-300  text-sm md:flex lg:flex items-center space-x-1">
@@ -126,7 +125,7 @@ const ProductCard = (props) => {
                                                     </button>
                                                 </div>
                                             </>
-                                        ) : (
+                                        ) : ( */}
                                             <>
                                                 <div className="flex items-center justify-end">
                                                     <button
@@ -161,7 +160,7 @@ const ProductCard = (props) => {
                                                     </button>
                                                 </div>
                                             </>
-                                        )} 
+                                        {/* )}  */}
                                     </div>
                                 </div>
                             </>

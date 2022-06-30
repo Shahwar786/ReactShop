@@ -1,4 +1,3 @@
-import React from "react";
 import { BsCartCheckFill, BsFillBagCheckFill } from "react-icons/bs";
 import { RiCloseLine } from "react-icons/ri";
 import Fade from "react-reveal/Fade";
@@ -81,7 +80,7 @@ const CartSideBar = ({ setShow }) => {
                   Checkout ({quantity} pcs)
                 </span>
                 <div className="bg-white px-3 py-2 rounded-lg text-primary text-sm">
-                  &#2547; {price?.toFixed(2)}
+                  $ {price?.toFixed(2)}
                 </div>
               </div>
             // </Link>

@@ -78,7 +78,7 @@ const CartPdCard = (props) => {
         <div className="flex flex-col space-y-2">
           <h1 className="break-all text-sm">{name}</h1>
           <p className="text-primary">
-            &#2547; {newPrice - discountPrice}{" "}
+           $ {newPrice - discountPrice}{" "}
             <span className="text-gray-600">({getThisPD?.pdQuantity} pcs)</span>
           </p>
         </div>
@@ -86,7 +86,7 @@ const CartPdCard = (props) => {
         {/* price  */}
         <div className="flex flex-col justify-center">
           <h2 className="text-gray-700">
-            &#2547;{" "}
+            $
             {(newPrice - discountPrice).toFixed(0) *
               getThisPD?.pdQuantity}
           </h2>

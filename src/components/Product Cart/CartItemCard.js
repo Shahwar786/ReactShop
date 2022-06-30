@@ -1,4 +1,3 @@
-import React from 'react';
 import { BsFillBagCheckFill } from 'react-icons/bs';
 import useCart from '../../hooks/useCart';
 
@@ -28,7 +27,7 @@ const CartItemCard = ({ handleShow}) => {
 
             {/* price  */}
             <div className='bg-white rounded-md px-2 py-2 text-gray-600 flex justify-center text-sm'>
-                <span>&#2547; {price?.toFixed(2)}</span>
+                <span>$ {price?.toFixed(2)}</span>
             </div>
         </div>
     )
