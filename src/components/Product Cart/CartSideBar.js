@@ -1,7 +1,7 @@
 import { BsCartCheckFill, BsFillBagCheckFill } from "react-icons/bs";
 import { RiCloseLine } from "react-icons/ri";
 import Fade from "react-reveal/Fade";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import useCart from "../../hooks/useCart";
 import CartPdCard from "./CartPdCard";
 
@@ -71,7 +71,7 @@ const CartSideBar = ({ setShow }) => {
         <div className="px-2">
           {/* checkout button  */}
           {cart?.length > 0 ? (
-            // <Link to="/checkout">
+            <Link to="/cart">
               <div
                 className="bg-violet-600 rounded-lg px-2 py-2  hover:bg-violet-800 transition duration-300 w-full flex justify-between items-center cursor-pointer mt-8"
                 onClick={() => setShow(false)}
@@ -83,7 +83,7 @@ const CartSideBar = ({ setShow }) => {
                   $ {price?.toFixed(2)}
                 </div>
               </div>
-            // </Link>
+            </Link>
           ) : (
             // <Link to="/shops">
               <div

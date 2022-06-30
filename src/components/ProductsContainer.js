@@ -20,7 +20,7 @@ const ProductsContainer = () => {
     let breadPd = productsData?.filter((item) => item?.category?.toLowerCase() === "bread")
 
     useEffect(() => {
-        axios.get('http://localhost:5000/products').then(res => getProductsData(res.data))
+        axios.get('https://reactoapi.herokuapp.com/products').then(res => getProductsData(res.data))
     }, [])
 
     const categoires = [

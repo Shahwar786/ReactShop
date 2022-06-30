@@ -6,7 +6,7 @@ const Products = ({ categoryText }) => {
     const [productsData, getProductsData] = useState([])
 
     useEffect(() => {
-        axios.get('http://localhost:5000/products').then(res => getProductsData(res.data))
+        axios.get('https://reactoapi.herokuapp.com/products').then(res => getProductsData(res.data))
     },[])
 
     return (

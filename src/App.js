@@ -5,6 +5,7 @@ import ProductCart from "./components/Product Cart/ProductCart";
 import AuthProvider from "./contexts/AuthProvider";
 import CartProvider from "./contexts/CartProvider";
 import Home from "./Home";
+import CartDetailsPage from "./pages/CartDetailsPage";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 // import Login from "./pages/LoginPage";
@@ -21,6 +22,7 @@ function App() {
 
           <Routes>
             <Route path="/" element={<PrivateRoute><Home /></PrivateRoute>} />
+            <Route path="/cart" element={<PrivateRoute><CartDetailsPage /></PrivateRoute>} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<SignUp />} />
           </Routes>
