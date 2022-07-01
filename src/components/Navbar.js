@@ -1,10 +1,9 @@
-import React from 'react';
 import { FiLogOut } from 'react-icons/fi';
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from '../hooks/useAuth';
 
 const Navbar = () => {
-    const { user, signOutUser } = useAuth();
+    const {auth, user, signOutUser } = useAuth();
     const navigate = useNavigate();
 
     const handleLogout = () => {
@@ -29,7 +28,7 @@ const Navbar = () => {
 
                 {/* login and signup button  */}
                 {
-                    user ? (
+                    auth.currentUser ? (
                         <>
                             <div className="flex items-center space-x-3 mr-3 lg:mr-0">
                                 <div className='flex flex-col'>

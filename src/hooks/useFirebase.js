@@ -173,7 +173,7 @@ const useFirebase = () => {
 
 
     return {
-        // newUser,
+        auth,
         user,
         signUpUser,
         signInUser,
