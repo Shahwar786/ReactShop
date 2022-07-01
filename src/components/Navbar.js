@@ -18,7 +18,7 @@ const Navbar = () => {
             <div className='flex flex-grow justify-between items-center'>
                 {/* logo  */}
                 <div>
-                    <h1 className='text-violet-500 font-bold text-3xl'>Logo</h1>
+                    <h1 className='text-violet-500 font-bold text-3xl'>ONYXTEC</h1>
                 </div>
 
                 {/* search bar  */}
